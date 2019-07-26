@@ -5,7 +5,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-
 }
 
 h2 {
@@ -13,7 +12,6 @@ h2 {
     font-size: 43px;
     letter-spacing: 1px;
     word-spacing: 5px;
-
 }
 
 h3 {
@@ -28,7 +26,7 @@ h4 {
     font-size: 25px;
     width: 300px;
     height: 35px;
-    margin: 10px;
+    margin: 10px 10px 20px 10px;
 }
 
 h5 {
@@ -42,15 +40,13 @@ header {
 }
 
 .content {
-    width: 1100px;
+    width: 1200px;
     margin: auto;
 }
 
 span {
     color: #24baa0;
 }
-
-
 
 header section.menu {
     margin: auto;
@@ -61,7 +57,6 @@ header section.menu {
     align-items: center;
     font-size: 22px;
     }
-
 
 header section.menu li {
     list-style: none;
@@ -113,7 +108,6 @@ section.banner article div.bannerRightSide {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-
 }
 
 section.middle {
@@ -168,15 +162,74 @@ section div.priceList {
 }
 
 section div.priceList article{
-    border: #DEDBDB solid 1px;
-    background-color: #FAFAFA;
-    display: flex;
-    flex-direction: column;
-    min-width: 250px;
-    align-items: center;
+     border: #DEDBDB solid 1px;
+     background-color: #FAFAFA;
+     display: flex;
+     flex-direction: column;
+     min-width: 350px;
+     justify-content: space-between;
 }
 
-div.price {
+section div.priceList article:hover{
+    border: #24baa0 solid 1px;
+    background-color:#24baa0;
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+section div.priceList article:hover div.upper_part h5{
+    color: #ffffff;
+}
+
+section div.priceList article:hover div.upper_part div.circle{
+    background-color: #24baa0;
+    border-color: #24baa0;
+
+}
+
+section div.priceList article:hover div.upper_part div.circle:before{
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #24baa0;
+}
+
+section div.priceList article:hover div.upper_part div.price{
+    border-color: #24baa0;
+    color: #24baa0;
+}
+
+section div.priceList article:hover div.upper_part div.priceListAttributes div:nth-child(2n-1){
+    background-color: #F7F0F4;
+}
+
+section div.priceList article:hover div.upper_part div.priceListAttributes div:nth-child(2n){
+    background-color: #cccccc;
+}
+
+section div.priceList article:hover div.bottom_part a{
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #24baa0;
+}
+
+section div.priceList article div.upper_part {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    align-items: center;
+    position: relative;
+    top:-40px;
+}
+
+section div.priceList article div.upper_part div {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+section div.priceList article div.upper_part div.price {
     width: 130px;
     height: 130px;
     border: #DEDBDB solid 1px;
@@ -186,14 +239,234 @@ div.price {
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
+    color: #A8A8A8;
 }
 
-div .priceText {
+section div.priceList article div.upper_part div.priceText {
     font-size: 35px;
     padding-left: 15px;
+    margin: 0;
 }
 
-sup {
+section div.priceList article div.upper_part div.priceText sup {
     vertical-align: super;
     font-size: 20px;
+}
+
+section div.priceList article div.upper_part div.currency {
+    margin: 0;
+    padding: 0;
+}
+
+section div.priceList article div.upper_part div.priceListAttributes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    color: #A8A8A8;
+}
+
+section div.priceList article div.upper_part div.priceListAttributes div:nth-child(2n-1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccccc;
+    min-width: 350px;
+    height: 40px;
+    margin: 0px;
+}
+
+section div.priceList article div.upper_part div.priceListAttributes div:nth-child(2n) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F0F4;
+    min-width: 350px;
+    height: 40px;
+    margin: 0px;
+}
+
+section div.priceList article div.bottom_part{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -25px;
+}
+
+section div.priceList article div.bottom_part a {
+    background-color: #24baa0;
+    width: 150px;
+    height: 50px;
+    color: #ffffff;
+    border: #24baa0 2px solid;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+section div.priceList article div.upper_part div.circle{
+    border: #DEDBDB solid 1px;
+    background-color: #FAFAFA;
+    width: 50px;
+    height: 50px;
+    content: " ";
+    position: relative;
+    border-radius: 50px;
+    align-self: center;
+    z-index: 1;
+}
+
+section div.priceList article div.upper_part div.circle:before{
+    display: flex;
+    border: #DEDBDB solid 1px;
+    background-color: #aaa9ad;
+    width: 25px;
+    height: 25px;
+    content: " ";
+    border-radius: 25px;
+    align-self: center;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 10px;
+    z-index: 2;
+}
+
+section.contact {
+    padding: 35px;
+}
+
+section.contact form {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.contact form div.leftSide {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+section.contact form div.leftSide input{
+    border: #24baa0 1px solid;
+    margin: 10px;
+    height: 80px;
+    padding: 15px;
+    font-size: 30px;
+}
+
+section.contact form div.leftSide textarea{
+    border: #24baa0 1px solid;
+    margin: 10px;
+    padding: 15px;
+    font-size: 30px;
+    font-family: Roboto;
+}
+
+section.contact form div.rightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+}
+
+section.contact form div.rightSide img {
+    margin: 15px;
+}
+
+
+section.contact form div.rightSide label {
+    font-size: 25px;
+    color: #aaa9ad;
+    display: block;
+    position: relative;
+    padding-left: 55px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+section.contact form div.rightSide label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+section.contact form div.rightSide label span.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    background-color: #ffffff;
+    border: #24baa0 2px solid;
+    border-radius: 5px;
+}
+
+section.contact form div.rightSide label input:hover ~ span.checkmark {
+    background-color: #F7F0F4;
+}
+
+section.contact form div.rightSide label input:checked ~ span.checkmark {
+    background-color: #ffffff;
+}
+
+.checkmark:after {
+    content: "✔";
+    position: absolute;
+    display: none;
+}
+
+section.contact form div.rightSide label input:checked ~ span.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after  {
+    font-size: 35px;
+    padding-left: 8px;
+}
+
+section.contact form div.rightSide input {
+    height: 50px;
+    width: 50px;
+}
+
+section.contact form div.rightSide div.buttonMessage {
+    background-color: #24baa0;
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 23px;
+}
+
+footer.bottom {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    color: #A8A8A8;
+    font-size: 20px;
+}
+
+footer.bottom div.leftSide {
+    width: 810px;
+    padding-left: 48px;
+}
+
+footer.bottom div.rightSide {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    align-items: center;
 }
