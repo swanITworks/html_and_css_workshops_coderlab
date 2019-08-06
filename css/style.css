@@ -3,12 +3,17 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
 h2 {
-    margin: 20px;
+    margin: 10px;
     font-size: 43px;
     letter-spacing: 1px;
     word-spacing: 5px;
@@ -58,10 +63,57 @@ header section.menu {
     font-size: 22px;
     }
 
-header section.menu li {
+header section.menu nav > ul {
+    display: flex;
     list-style: none;
-    display: inline-block;
+    flex-direction: row;
+    align-items: center;
+}
+
+header section.menu nav ul > li {
+    list-style: none;
     margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    display: flex;
+}
+
+header section.menu ul.aboutLevel1 {
+    display: none;
+    margin: 0px;
+    padding: 10px;
+}
+
+header section.menu ul.aboutLevel1 li {
+    z-index: 1;
+    background-color: black;
+    padding: 10px;
+    height: 30px;
+}
+
+header section.menu li:hover > ul {
+    display: block;
+    width: 140px;
+    height: 100px;
+    position: absolute;
+    font-size: 18px;
+    padding: 0px;
+    top: 45px;
+    z-index: 1;
+}
+
+header section.menu li:hover > ul:before {
+    z-index: -1;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: black;
+    position: relative;
+    top: 15px;
+    left: 50px;
+    transform: rotate(45deg);
 }
 
 section.banner {
@@ -370,6 +422,7 @@ section.contact form div.rightSide {
     flex-direction: column;
     align-items: center;
     width: 35%;
+    justify-content: center;
 }
 
 section.contact form div.rightSide img {
@@ -382,6 +435,7 @@ section.contact form div.rightSide label {
     color: #aaa9ad;
     display: block;
     position: relative;
+    left: 60px;
     padding-left: 55px;
     margin-bottom: 12px;
     cursor: pointer;
@@ -393,6 +447,7 @@ section.contact form div.rightSide label {
 
 section.contact form div.rightSide label input {
     position: absolute;
+    top: 15px;
     opacity: 0;
     cursor: pointer;
     height: 0;
@@ -401,7 +456,7 @@ section.contact form div.rightSide label input {
 
 section.contact form div.rightSide label span.checkmark {
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 0;
     height: 50px;
     width: 50px;
