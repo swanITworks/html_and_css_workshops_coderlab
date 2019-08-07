@@ -1,3 +1,27 @@
+Button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
 * {
     margin: 0px;
     box-sizing: border-box;
@@ -128,22 +152,23 @@ section.banner article {
     justify-content: space-around;
     }
 
-section.banner article:before {
-    content: " ";
-    width: 50px;
-    height: 50px;
-    border-left: #24baa0 5px solid;
-    border-bottom: #24baa0 5px solid;
-    transform: rotate(45deg);
+section.banner article img {
+    width: 469px;
+    height: 337px;
 }
 
-section.banner article:after {
-    content: " ";
-    width: 50px;
-    height: 50px;
-    border-right: #24baa0 5px solid;
-    border-top: #24baa0 5px solid;
-    transform: rotate(45deg);
+.article1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.article2 {
+    display: none;
+}
+
+.article3 {
+    display: none;
 }
 
 section.banner article div.bannerRightSide {
@@ -542,4 +567,27 @@ footer.bottom div.rightSide {
     justify-content: space-between;
     width: 300px;
     align-items: center;
+}
+
+.next, .prev {
+    -webkit-border-radius: 44;
+    -moz-border-radius: 44;
+    border-radius: 44px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 60px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background:  #24baa0;
+    text-decoration: none;
+}
+
+.next:hover, .prev:hover  {
+    background: #A8A8A8;
+    background-image: -webkit-linear-gradient(top, #A8A8A8, #858385);
+    background-image: -moz-linear-gradient(top, #A8A8A8, #858385);
+    background-image: -ms-linear-gradient(top, #A8A8A8, #858385);
+    background-image: -o-linear-gradient(top, #A8A8A8, #858385);
+    background-image: linear-gradient(to bottom, #A8A8A8, #858385);
+    text-decoration: none;
 }
