@@ -1,6 +1,4 @@
-# swanITworks.github.io
-
-Wokshop 1/6
+#Workshops 1/6
 
 This repository was created by me as a task at the end of the first module at Coderlab It school.
 The first module concerns the basics of JS HTML CSS.
